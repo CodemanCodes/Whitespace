@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+    /* Modal Structure */
+
+    html,
+    body {
+      margin: 0;
+      min-height: 180px;
+      padding: 0;
+      width: 384px;
+    }
+
+    .modal_header {
+      align-items: center;
+      border-bottom: 0.5px solid #dadada;
+    }
+
+    .modal_content {
+      padding: 0 22px;
+    }
+
+    .modal_cta {
+      border-top: 0.5px solid #dadada;
+      width: 100%;
+    }
+    /* Header Section */
+
+    .logo {
+      padding: 16px;
+    }
+
+    .logo_icon {
+      vertical-align: text-bottom;
+      margin-right: 12px;
+    }
+
+    .version_number {
+      color: #444;
+      font-size: 18px;
+    }
+
+    /* CTA Section */
+
+    .flex_container {
+      display: flex;
+      justify-content: center;
+      padding: 10px 22px;
+    }
+
+    .flex {
+      opacity: 1;
+      width: 120px;
+    }
+
+    .icon {
+      display: inline-block;
+      position: relative;
+    }
+
+    .icon:before {
+      content: "";
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-size: 33px 33px;
+      width: 33px;
+      height: 33px;
+    }
+
+    .toggleButton {
+      background:    #3d85c6;
+      background:    -webkit-linear-gradient(#3d85c6, #073763);
+      background:    linear-gradient(#3d85c6, #073763);
+      border-radius: 5px;
+      color:         #ffffff;
+      display:       inline-block;
+      text-align:    center;
+      text-shadow:   1px 1px #000000;
+      width: 90px;
+      padding: 10px 15px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      box-shadow: 0 3px #999;
+    }
+
+    .toggleButton:hover {
+      background:    linear-gradient(#0b5394, #073763);
+    }
+
+    .toggleButton:active {
+      background-color: #3e8e41;
+      box-shadow: 0 1px #666;
+      transform: translateY(2px);
+    }
+
+    /* Content */
+
+    a:link,
+    a:visited {
+      color: #000000;
+      outline: 0;
+      text-decoration: none;
+    }
+
+    img {
+      width: 30px;
+    }
+
+    h1 {
+      font-family: 'Menlo', monospace;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+    }
+
+    /* open-sans-regular - latin-ext_latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/assets/assets/fonts/open-sans-v15-latin-ext_latin-regular.eot');
+    }
+    </style>
+  </head>
+  <body>
+    <div class="modal_header">
+      <h1 class="logo"><img class="logo_icon" src="images/whitespace32.png">Whitespace&nbsp;<span class="version_number">1.0.3</span></h1>
+    </div>
+    <div class="modal_content">
+      <p>Whitespace detects if you are viewing a PR diff on github and automatically reloads the page to hide whitespace.</p>
+    </div>
+    <div class="modal_cta">
+      <div class="flex_container">
+        <div class="flex">
+          <button id="toggleButton" class="toggleButton">Disable</button>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
