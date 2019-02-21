@@ -32,7 +32,21 @@ chrome.webRequest.onBeforeRequest.addListener(
   	["blocking"]
 );
 
-chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+chrome.webNavigation.onHistoryStateUpdated.addListener(
+	function() {
+		chrome.tabs.query({active: true}, function(tabs){
+			for (var tab of tabs){
+				chrome.tabs.sendMessage(tab.id, {navChanged: true});
+			}
+		});
+	},
+	{
+		url: [
+			{hostSuffix: "github.com" }
+		]
+	});
+
+/*chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
     if (isEnabled && !details.url.endsWith("?w=1")) {
 		chrome.history.deleteUrl({url: details.url});
 		chrome.tabs.update(details.tabId, {url: details.url + "?w=1", loadReplace: true})
@@ -42,7 +56,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
 	url: [
 		{hostSuffix: "github.com", pathContains: "/files" }
 	]
-});
+});*/
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -55,6 +69,17 @@ chrome.runtime.onMessage.addListener(
 
     sendResponse({received: true});
  });
+
+ chrome.runtime.onMessage.addListener(
+	function(request, sender) {
+		console.log(request);
+		if (isEnabled && request.url.endsWith("/files"))
+		{
+			chrome.history.deleteUrl({url: request.url});
+			chrome.tabs.update(sender.tab.Id, {url: request.url + "?w=1", loadReplace: true})
+		}
+	}
+ )
 
 function setIsEnabled(){
 	chrome.storage.local.set({github_whitespace_isEnabled: true}, function() {

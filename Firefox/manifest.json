@@ -1,6 +1,6 @@
 {
     "name": "Whitespace",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Automatically reloads page to hide whitespace when viewing PR diffs on Github",
     "manifest_version": 2,
     "background": {
@@ -16,6 +16,13 @@
       "128": "images/whitespace128.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*/pull/*", "*://*.github.com/*/*/pull/*"],
+      "exclude_matches": ["*://github.com/*/*/pull/*/files*", "*://*.github.com/*/*/pull/*/files*"],
+      "js": ["inject.js"]
+    }
+  ],
   "icons": {
     "16": "images/whitespace16.png",
     "32": "images/whitespace32.png",
