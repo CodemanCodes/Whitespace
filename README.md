@@ -10,7 +10,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/jtsom"><img src="https://avatars1.githubusercontent.com/u/13488?v=4" width="100px;" alt="John Tsombakos"/><br /><sub><b>John Tsombakos</b></sub></a><br /><a href="https://github.com/CodemanCodes/Whitespace/commits?author=jtsom" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/jtsom"><img src="https://avatars1.githubusercontent.com/u/13488?v=4" width="100px;" alt="John Tsombakos"/><br /><sub><b>John Tsombakos</b></sub></a><br /><a href="https://github.com/CodemanCodes/Whitespace/commits?author=jtsom" title="Documentation">📖</a> <a href="https://github.com/CodemanCodes/Whitespace/commits?author=jtsom" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
