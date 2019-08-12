@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "CodemanCodes",
+      "name": "CodemanCodes",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/46641880?v=4",
+      "profile": "https://github.com/CodemanCodes",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Whitespace",
+  "projectOwner": "CodemanCodes",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
