@@ -10,7 +10,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
-    <td align="center"><a href="https://michaeljolley.com/"><img src="https://avatars2.githubusercontent.com/u/1228996?v=4" width="100px;" alt="Michael Jolley"/><br /><sub><b>Michael Jolley</b></sub></a><br /><a href="https://github.com/CodemanCodes/Whitespace/commits?author=michaeljolley" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://michaeljolley.com/"><img src="https://avatars2.githubusercontent.com/u/1228996?v=4" width="100px;" alt="Michael Jolley"/><br /><sub><b>Michael Jolley</b></sub></a><br /><a href="https://github.com/CodemanCodes/Whitespace/commits?author=michaeljolley" title="Documentation">📖</a> <a href="https://github.com/CodemanCodes/Whitespace/commits?author=michaeljolley" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
